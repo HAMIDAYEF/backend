@@ -11,8 +11,6 @@ import adminRoutes from './routes/admin.route.js';
 import examRoutes from './routes/exam.route.js';
 import paymentRoutes from './routes/payment.route.js';
 
-
-import chatbotRoutes from './routes/chatbot.route.js';
 const app = express();
 
 // MIDDLEWARES (Ordre important)
@@ -27,8 +25,6 @@ app.use('/records', instructorRoutes);
 app.use('/records', adminRoutes);
 app.use('/records', examRoutes);
 app.use('/records', paymentRoutes);
-
-app.use('/records', chatbotRoutes);
 
 const PORT = 3200;
 app.listen(PORT, () => {
